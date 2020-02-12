@@ -1,0 +1,86 @@
+{
+	"START": {
+		"name": "Crash site",
+		"desc": "Your next to your ship that crashed while running from the Empire. To your north is a bunker",
+		"exits": [
+			{
+				"exit": "NORTH",
+				"target": "BUNKER"
+			}
+		]
+	},
+	"items": [
+	{
+		"items": "LIGHTSABER",
+		"desc": "Your lightsaber is lying on the ground. It can be used for light as well as a weapon",
+		"take": "You pick up the lightsaber."
+		
+	}
+],
+
+	"BUNKER": {
+		"name": "Bunker",
+		"desc": "You entered a dark bunker. To the north is a dimly lit hallway. Walls surround you ",
+		"exits": [
+			{
+				"exit": "NORTH",
+				"target": "HALLWAY"
+			},
+			{
+				"exit": "SOUTH",
+				"target": "Crash site"
+			}
+		]
+	},
+	"HALLWAY":{
+		"name": "Hallway",
+		"desc": "The lights are flickering but to the north is a corridor.",
+		"exits": [
+			{
+				"exit": "SOUTH",
+				"target": "Bunker"
+			},
+			{
+				"exit":"NORTH",
+				"target": "CORRIDOR"
+			}
+		]
+		
+	},
+	"CORRIDOR": {
+		"name": "Corridor",
+		"desc": "To the north there is a stair case leading down to a dark place. To the west is a dead end. To the east is a dark hallway.",
+		"exits": [
+			{
+				"exit": "SOUTH",
+				"target": "Hallway"
+			},
+			{
+				"exit": "NORTH",
+				"target":"Boiler Room"
+			},
+			{
+				"exit": "WEST",
+				"target":"Hanger"
+			},
+			{
+				"exit":"EAST",
+				"target":"Command room"
+			}
+		]
+	},
+	"Boiler Room":{
+		"name": "Boiler Room",
+		"desc": "It is an old Republic symbol on the wall but everything else has been cleared out after the war",
+		"exits":[
+			{
+				"exit":"SOUTH",
+				"target":"Corridor"
+
+			}
+		]
+	}
+	
+	
+	
+}
